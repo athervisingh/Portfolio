@@ -6,7 +6,7 @@ const BigName = () => {
     const [lastScrollY, setLastScrollY] = useState(0); // State to track last scroll position
     const [scrollDirection, setScrollDirection] = useState('down'); // Initial direction for scrolling
     const [isScrolling, setIsScrolling] = useState(false); // State to track if user is scrolling
-
+console.log("sbndns")
     // Scroll event listener
     useEffect(() => {
         const handleScroll = () => {
