@@ -65,17 +65,17 @@ console.log("sbndns")
         const marqueeElement = marqueeRef.current;
         gsap.to(marqueeElement, {
             x: -marqueeElement.scrollWidth, // Move left initially
-            duration: 100, // Duration of initial animation
+            duration: 150, // Duration of initial animation
             ease: "none", // Linear movement
             repeat: -1 // Repeat infinitely
         });
     }, []); // Only runs once when component mounts
 
     return (
-        <div className="fixed z-50 bottom-14 w-[100vw] h-[30vh] overflow-hidden items-center flex justify-center">
+        <div className="absolute z-50 bottom-14 w-[100vw] h-[30vh] overflow-hidden items-center flex justify-center">
             <div
                 ref={marqueeRef}
-                className="whitespace-nowrap text-white text-9xl"
+                className="whitespace-nowrap text-white text-9xl font-light"
                 style={{ display: 'inline-block' }}
             >
                 {/* Duplicate the text for seamless scrolling */}
