@@ -9,6 +9,7 @@ import Lenis from '@studio-freight/lenis';
 import { gsap } from 'gsap';
 
 const Intro = () => {
+    gsap.registerPlugin()
     const [hoveredLink, setHoveredLink] = useState({ x: 0, y: 0 });
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const [isHovered, setIsHovered] = useState(false);
@@ -119,7 +120,7 @@ const Intro = () => {
                 </div>
 
                 <div className='w-[40vw] p-10'>
-                    <div data-aos="fade-left" className='w-[30vw] italic'>
+                    <div data-aos="fade-left" className='w-[30vw] italic' >
                         My passion for design, code, and interaction drives me to create meaningful web experiences, positioning me to bring fresh perspectives to the world of web development.
                     </div>
                     <div className='flex justify-center' data-aos="flip-left">
@@ -128,6 +129,7 @@ const Intro = () => {
                             onMouseMove={handleMouseMove}
                             onMouseEnter={handleMouseEnter}
                             onMouseLeave={handleMouseLeave}
+                    
                         >
                             <div className="w-full h-full relative">
                                 <Link href='/'
@@ -138,6 +140,7 @@ const Intro = () => {
                                         transform: `translate(${position.x}px, ${position.y}px)`,
                                         transition: 'transform 0.3s ease-out, background-color 0.3s ease-in-out',
                                     }}
+                                  
                                     ref={circleRef}
                                     
                                 >

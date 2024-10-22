@@ -59,7 +59,7 @@ const Navbar = () => {
 
 
             <div className='flex w-60 items-center'>
-                {['Work', 'About', 'Contact'].map((label, index) => (
+                {['work', 'about', 'contact'].map((label, index) => (
                     <div
                         key={index}
                         className='w-40 h-full items-center flex justify-center relative'

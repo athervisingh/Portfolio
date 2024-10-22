@@ -9,4 +9,5 @@ html {
 }
 body{
   font-family: 'poppins', sans-serif;
+  cursor: wait;
 }
