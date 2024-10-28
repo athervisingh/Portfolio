@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import { CoolMode } from "./ui/cool-mode";
 
 const Navbar = () => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -44,19 +45,22 @@ const Navbar = () => {
 
     return (
         <div className='p-5 w-[100vw] absolute z-50 text-white flex justify-between'>
-            <div className='h-10 w-56 group' >
-                <div className='cursor-pointer transition-transform duration-500 hover:translate-y-[28%] hover:translate-x-[2%] flex gap-1 px-5 h-full items-center'>
-                    <div>&copy;</div>
-                    <div className='flex gap-1 overflow-hidden relative w-[130px]'>
-                        <div className='flex transition-transform duration-500 group-hover:translate-x-[-38%]'>
-                            <span className='whitespace-nowrap'>Code&nbsp;by&nbsp;</span>
-                            <span className='whitespace-nowrap'>Athervi&nbsp;</span>
-                            <span className='whitespace-nowrap'>Singh</span>
+           
+
+            <CoolMode>
+                <div className='h-10 w-56 group' >
+                    <div className='cursor-pointer transition-transform duration-500 hover:translate-y-[28%] hover:translate-x-[2%] flex gap-1 px-5 h-full items-center'>
+                        <div>&copy;</div>
+                        <div className='flex gap-1 overflow-hidden relative w-[130px]'>
+                            <div className='flex transition-transform duration-500 group-hover:translate-x-[-38%]'>
+                                <span className='whitespace-nowrap'>Code&nbsp;by&nbsp;</span>
+                                <span className='whitespace-nowrap'>Athervi&nbsp;</span>
+                                <span className='whitespace-nowrap'>Singh</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
+            </CoolMode>
 
             <div className='flex w-60 items-center'>
                 {['work', 'about', 'contact'].map((label, index) => (

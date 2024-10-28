@@ -12,7 +12,8 @@ module.exports = {
   			'spin-very-slow': 'spin 20s linear infinite',
   			'spin-slow': 'spin 10s linear infinite',
   			meteor: 'meteor 5s linear infinite',
-  			shine: 'shine var(--duration) infinite linear'
+  			shine: 'shine var(--duration) infinite linear',
+  			'background-position-spin': 'background-position-spin 3000ms infinite alternate'
   		},
   		colors: {
   			background: 'hsl(var(--background))',
@@ -84,6 +85,14 @@ module.exports = {
   				},
   				to: {
   					'background-position': '0% 0%'
+  				}
+  			},
+  			'background-position-spin': {
+  				'0%': {
+  					backgroundPosition: 'top center'
+  				},
+  				'100%': {
+  					backgroundPosition: 'bottom center'
   				}
   			}
   		}

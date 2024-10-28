@@ -1,11 +1,11 @@
 "use client"
 
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect} from 'react'
 import Navbar from './Navbar'
 import Location from './Location'
 import HeroHeanding from './HeroHeanding'
-import BigName from './BigName'
 import Lenis from '@studio-freight/lenis'
+import { VelocityScroll } from "./ui/scroll-based-velocity";
 
 const Hero = () => {
     
@@ -36,7 +36,11 @@ const Hero = () => {
             <Navbar />
             <Location />
             <HeroHeanding />
-            {/* <BigName/> */}
+            <VelocityScroll
+                text="Athervi Singh"
+                default_velocity={5}
+                className="font-display text-center text-6xl font-bold tracking-[-0.02em] text-white drop-shadow-sm dark:text-white md:text-7xl md:leading-[5rem]"
+            />
             {/* Image container with GSAP animation */}
             <img
                
