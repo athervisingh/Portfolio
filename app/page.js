@@ -5,6 +5,8 @@ import ProjectList from '@/components/ProjectList';
 import { useEffect, useState } from 'react';
 import Preloader from '../components/Preloader'
 import { AnimatePresence } from 'framer-motion';
+import TechStack from '@/components/TechStack';
+import ExperienceAndCerti from '@/components/ExperienceAndCerti';
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -28,6 +30,7 @@ export default function Home() {
       )()   
   }, [])
   
+  
   return (
     <div className="scroll-smooth">
      <AnimatePresence mode='wait'>
@@ -37,7 +40,10 @@ export default function Home() {
     </AnimatePresence>
       <Hero />
       <Intro />
-      <ProjectList/>
+      <ProjectList />
+      <TechStack />
+      <ExperienceAndCerti/>
+      
     </div>
   );
 }

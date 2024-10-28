@@ -4,7 +4,9 @@ import { motion, AnimatePresence } from 'framer-motion'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Link from 'next/link';
-import Lenis from '@studio-freight/lenis';
+import Lenis from '@studio-freight/lenis'
+import SlidingImage from '../components/SlidingImage'
+import { useScroll, useTransform } from 'framer-motion';
 
 const ProjectList = () => {
   const [isHovered, setIsHovered] = useState(false)
@@ -32,6 +34,13 @@ const ProjectList = () => {
     "/images/To-Do List.png",
     "/images/MusicWave : Music Streaming Application.png"
   ];
+
+  const container = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start end", "end start"]
+  })
+  const height = useTransform(scrollYProgress, [0, 0.9], [50, 0])
 
   useEffect(() => {
     AOS.init({
@@ -159,11 +168,10 @@ const ProjectList = () => {
   };
 
   return (
-    <div className='mb-10'>
-      <hr className="border-black border-1 mb-5" />
+    <div className='mb-10'>   
       <h1 className='text-2xl text-center mb-20'>WORK</h1>
-      <div className='flex justify-around gap-10 '>
-        <div data-aos="zoom-out-down" className='px-10 w-[30vw]'>
+      <div className='flex justify-between gap-5'>
+        <div data-aos="zoom-out-down" className='pl-10 w-[30vw]'>
           {projects.map((project, i) => (
             <div
               key={i}
@@ -176,16 +184,21 @@ const ProjectList = () => {
         </div>
 
         <div
-          className='w-[50vw] items-center p-4 h-[428px] flex justify-center mb-8 relative'
+          className='w-[60vw] items-center h-[428px] flex justify-center mt-10 mr-10 relative'
           onMouseMove={handleMouseMove}
           onMouseLeave={handleImageMouseLeave}
-        >
+        >{!isHovered && (
+     
+            <SlidingImage/>
+
+        )}
+
           <AnimatePresence mode="wait">
             {isHovered && index !== -1 && (
               <motion.img
                 key={index}
                 onMouseEnter={handleImageMouseEnter}
-                className='rounded-md shadow-lg cursor-pointer'
+                className='rounded-md shadow-lg cursor-pointer mx-20 '
                 src={projectsLink[index]}
                 alt={projects[index]}
                 variants={imageVariants}
@@ -218,6 +231,9 @@ const ProjectList = () => {
           )}
         </div>
       </div>
+      <motion.div style={{ height }} className="relative mt-40">
+        <div className="absolute h-[750%] w-[100%] rounded-b-[100%] bg-white z-10 shadow-[0_60px_50px_rgba(0,0,0,0.75)]"></div>
+      </motion.div>
     </div>
   )
 }
