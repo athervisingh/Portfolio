@@ -112,7 +112,7 @@ const TechStack = () => {
 
   return (
     <div className='bg-white'>
-      <div className="relative w-[100vw] h-[100vh] bg-[#112240] flex flex-col items-center justify-center overflow-hidden">
+      <div className="relative w-[100vw] h-[120vh] bg-[#112240] flex flex-col items-center justify-center overflow-hidden">
         <motion.div
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -157,10 +157,10 @@ const TechStack = () => {
               </ShineBorder>
             </motion.div>
 
-            <div className="flex w-[55vw]">
+            <div className="flex w-[50vw]">
               <motion.div variants={cardVariants} className="">
                 <ShineBorder
-                  className="relative bg-[#112240] flex w-[15vw] h-44 flex-col overflow-hidden rounded-lg border md:shadow-xl hover:shadow-2xl transition-shadow duration-300"
+                  className="relative bg-[#112240] flex w-[15vw] h-[173px] flex-col overflow-hidden rounded-lg border md:shadow-xl hover:shadow-2xl transition-shadow duration-300"
                   color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
                 >
                   <h1 className="text-white text-xl mb-5 font-bold">LANGUAGES</h1>
@@ -172,7 +172,7 @@ const TechStack = () => {
 
               <motion.div variants={cardVariants}>
                 <ShineBorder
-                  className="relative bg-[#112240] flex w-[34vw] flex-col p-2 overflow-hidden rounded-lg border md:shadow-xl hover:shadow-2xl transition-shadow duration-300"
+                  className="relative bg-[#112240] flex w-[31.5vw] flex-col p-2 overflow-hidden rounded-lg border md:shadow-xl hover:shadow-2xl transition-shadow duration-300"
                   color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
                 >
                   <h1 className="text-white text-xl mb-5 font-bold">TOOLS</h1>
@@ -194,7 +194,7 @@ const TechStack = () => {
         />
       </div>
       <motion.div style={{ height }} className="relative">
-        <div className="absolute h-[750%] w-[100%] rounded-b-[100%] bg-[#11213f] z-10 shadow-[0_60px_50px_rgba(0,0,0,0.75)]"></div>
+        <div className="absolute h-[750%] z-[1000] w-[100%] rounded-b-[100%] bg-[#11213f] shadow-[0_60px_50px_rgba(0,0,0,0.75)]"></div>
       </motion.div>
     </div>
   );

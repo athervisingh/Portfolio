@@ -1,0 +1,44 @@
+.menu {
+    height: 100vh;
+    background-color: rgb(20, 20, 20);
+    position: fixed;
+    right: 0;
+    top: 0;
+    color: white;
+z-index: 214748364;
+    .body {
+        box-sizing: border-box;
+        height: 100%;
+        padding: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 214748364;
+
+        .nav {
+            display: flex;
+            flex-direction: column;
+            font-size: 46px;
+            gap: 8px;
+            margin-top: 40px;
+            z-index: 214748364;
+
+            .header {
+                color: rgb(153, 153, 153);
+                border-bottom: 1px solid rgb(153, 153, 153);
+                text-transform: uppercase;
+                font-size:11px;
+                margin-bottom: 20px;
+                z-index: 214748364;
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+                font-weight: 300;
+                z-index: 214748364;
+            }
+
+        }
+    }
+}

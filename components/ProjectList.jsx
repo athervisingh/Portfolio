@@ -8,6 +8,7 @@ import Lenis from '@studio-freight/lenis'
 import SlidingImage from '../components/SlidingImage'
 import { useScroll, useTransform } from 'framer-motion';
 
+
 const ProjectList = () => {
   const [isHovered, setIsHovered] = useState(false)
   const [index, setIndex] = useState(-1)
@@ -187,9 +188,15 @@ const ProjectList = () => {
           className='w-[60vw] items-center h-[428px] flex justify-center mt-10 mr-10 relative'
           onMouseMove={handleMouseMove}
           onMouseLeave={handleImageMouseLeave}
-        >{!isHovered && (
-     
-            <SlidingImage/>
+
+        >
+          
+          {!isHovered && (<>
+            
+            <SlidingImage />
+          </>
+           
+      
 
         )}
 

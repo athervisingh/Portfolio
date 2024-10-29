@@ -6,7 +6,7 @@ import BoxReveal from "./ui/box-reveal";
 
 const ExperienceAndCerti = () => {
     return (
-        <div className="relative flex h-[100vh] gap-5 w-full items-center overflow-hidden p-20 md:shadow-xl">
+        <div className="relative flex h-[150vh] gap-5 w-full items-center overflow-hidden p-20 md:shadow-xl">
             <NeonGradientCard className="w-[40vw] h-[450px] mt-12 items-center justify-center text-center">
                 <span className="pointer-events-none z-10 h-full whitespace-pre-wrap bg-gradient-to-br from-[#ff2975] from-35% to-[#00FFF1] bg-clip-text text-center text-3xl font-bold leading-none tracking-tighter text-transparent dark:drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
                     Experience
@@ -46,7 +46,7 @@ const ExperienceAndCerti = () => {
 
             </NeonGradientCard>
 
-            <div className=' flex flex-col gap-4 mt-10'>
+            <div className=' flex flex-col gap-4 mt-12'>
                 <NeonGradientCard className="w-[50vw] h-[215px] items-center justify-center text-center">
                     <span className="pointer-events-none z-10 h-full whitespace-pre-wrap bg-gradient-to-br from-[#ff2975] from-35% to-[#00FFF1] bg-clip-text text-center text-3xl font-bold leading-none tracking-tighter text-transparent dark:drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
                         Education
@@ -56,7 +56,7 @@ const ExperienceAndCerti = () => {
                         <div className='text-white flex gap-5 justify-center items-center '>
                             <img className='w-16' src="/images/AKTU.png" alt="AKTU" />
                             <div>
-                                <h1 className='font-bold text-lg'>Dr.A.P.J.Abdul Kalam Technical University,Lucknow</h1>
+                                <h1 className='font-bold text-[16px] text-left'>Dr.A.P.J.Abdul Kalam Technical University,Lucknow</h1>
                                 <h1 className='opacity-70 italic text-left'>
                                     Bechalore of Technology • August 2021 - August 2025
                                 </h1>

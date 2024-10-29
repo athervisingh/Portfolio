@@ -1,15 +1,18 @@
 "use client";
 import Hero from '@/components/Hero';
-import Intro from "@/components/Intro";
 import ProjectList from '@/components/ProjectList';
 import { useEffect, useState } from 'react';
 import Preloader from '../components/Preloader'
 import { AnimatePresence } from 'framer-motion';
 import TechStack from '@/components/TechStack';
 import ExperienceAndCerti from '@/components/ExperienceAndCerti';
+import Header from '../components/header'
+import Description from '../components/Description'
+
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
           (
 
@@ -37,9 +40,10 @@ export default function Home() {
 
       {isLoading && <Preloader />}
 
-    </AnimatePresence>
+      </AnimatePresence>
+     <Header />
       <Hero />
-      <Intro />
+      <Description />
       <ProjectList />
       <TechStack />
       <ExperienceAndCerti/>
